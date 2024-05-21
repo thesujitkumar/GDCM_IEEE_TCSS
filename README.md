@@ -1,4 +1,4 @@
-# Gated Recursive and Sequential Deep Hierarchical Encoding for Detecting Incongruent News Articles
+# A Headline-Centric Graph-Based Dual Context Matching Approach for Incongruent News Detection
 
 
 This is the official implementation of the paper [A Headline-Centric Graph-Based Dual Context Matching Approach for Incongruent News Detection](https://ieeexplore.ieee.org/abstract/document/10509576) **published in ```IEEE Transactions on Computational Social Systems```**. If you use this code or our results in your research, we'd appreciate you cite our paper as following.
