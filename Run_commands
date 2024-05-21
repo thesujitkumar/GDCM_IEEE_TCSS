@@ -1,0 +1,54 @@
+
+
+
+First create dataset folder as fllows: data ---->> dataset_name_Data--->>Parsed_Data---->>>create three subfolder under this namely Train, Test, Dev
+
+dataset_name_Data Name For NELA datatset is NELA
+dataset_name_Data Name For ISOT datatset is ISOT
+dataset_name_Data Name For FNC datatset is FNC_Mix
+
+
+
+For similarity feature-based approach : use --attn as sim example :  --attn sim
+For additive attention based approach : use --attn as additive example :  --attn additive
+For scaled attention based approach : use --attn as additive example :  --attn scaled
+
+
+
+
+
+Placed the dataset in respective folder and Run following commands as per datatset.
+
+
+For Nela Datset: 
+
+To Run GDCM_Max_Min Model :
+
+python main.py --run_type final --model_name GDCM_Max_Min --data data/NELA_Data/Parsed_Data   --input_dim 300 --mem_dim 100 --hidden_dim 100 --epoch 60 --data_name NELA --max_num_para 18 --max_num_sent 15  --file_len 5000 --max_num_word 12 --attn additive  --number_head 3  --save NELA_checkpoints_additive --radius 3
+
+To Run GDCM_Graph_Comp :
+
+python main.py --run_type final --model_name GDCM_Graph_Comp --data data/NELA_Data/Parsed_Data   --input_dim 300 --mem_dim 100 --hidden_dim 100 --epoch 60 --data_name NELA --max_num_para 18 --max_num_sent 15  --file_len 5000 --max_num_word 12 --attn additive  --number_head 3  --save NELA_checkpoints_additive --radius 3
+
+
+For ISOT Datset: 
+
+To Run GDCM_Max_Min Model :
+
+python main.py --run_type final --model_name GDCM_Max_Min --data data/ISOT_Data/Parsed_Data   --input_dim 300 --mem_dim 100 --hidden_dim 100 --epoch 60 --data_name NELA --max_num_para 18 --max_num_sent 15  --file_len 5000 --max_num_word 12 --attn additive  --number_head 3  --save NELA_checkpoints_additive --radius 3
+
+To Run GDCM_Graph_Comp :
+
+python main.py --run_type final --model_name GDCM_Graph_Comp --data data/ISOT_Data/Parsed_Data   --input_dim 300 --mem_dim 100 --hidden_dim 100 --epoch 60 --data_name NELA --max_num_para 18 --max_num_sent 15  --file_len 5000 --max_num_word 12 --attn additive  --number_head 3  --save NELA_checkpoints_additive --radius 3
+
+
+For FNC Datset:
+
+
+To Run GDCM_Max_Min Model :
+
+python main.py --run_type final --model_name GDCM_Max_Min --data data/FNC_Mix_Data/Parsed_Data   --input_dim 300 --mem_dim 100 --hidden_dim 100 --epoch 60 --data_name NELA --max_num_para 18 --max_num_sent 15  --file_len 5000 --max_num_word 12 --attn additive  --number_head 3  --save NELA_checkpoints_additive --radius 3
+
+To Run GDCM_Graph_Comp :
+
+python main.py --run_type final --model_name GDCM_Graph_Comp --data data/FNC_Mix_Data/Parsed_Data   --input_dim 300 --mem_dim 100 --hidden_dim 100 --epoch 60 --data_name NELA --max_num_para 18 --max_num_sent 15  --file_len 5000 --max_num_word 12 --attn additive  --number_head 3  --save FNC_checkpoints_additive --radius 3
